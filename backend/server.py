@@ -38,7 +38,7 @@ class S(BaseHTTPRequestHandler):
         content_length = int(self.headers['Content-Length'])  # <--- Gets the size of data
         post_data = self.rfile.read(content_length)
 
-        toSend = "<html><body><h1>POST: " + post_data + "</h1></body></html>"
+        toSend = "<html><body><p>This is received from server so number we inserted must have been in python code</p><h1>POST: " + post_data + "</h1></body></html>"
         self.wfile.write(toSend)
 
 
